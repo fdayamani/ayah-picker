@@ -9,7 +9,7 @@ public class AyahPicker {
 
     public String pickVerses(int ayaatToRead, Ayah startingAyah) {
         String startReference = makeReference(startingAyah);
-        int i = startingAyah.id + ayaatToRead - 2;
+        int i = startingAyah.id + ayaatToRead;
         while(!ayaat.get(i).startofRuku) {
             i++;
         }

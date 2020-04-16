@@ -26,4 +26,13 @@ public class AyahPickerTest {
 
         assertThat(ayahPicker.pickVerses(5, testData.get(0)), equalTo("Read from 1:1 to 1:7"));
     }
+
+    @Test public void
+    rounds_up_to_the_next_ruku_if_selection_is_over_7() {
+        AyahPicker ayahPicker = new AyahPicker(testData);
+
+        assertThat(ayahPicker.pickVerses(8, testData.get(0)), equalTo("Read from 1:1 to 2:7"));
+    }
+
+    //test for if it picks the end of the qur'an
 }
