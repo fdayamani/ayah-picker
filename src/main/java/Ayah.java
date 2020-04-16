@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class Ayah {
-    private int id;
-    private int surah;
-    private int ayahInSurah;
-    private boolean startofRuku;
+    public int id;
+    public int surah;
+    public int ayahInSurah;
+    public boolean startofRuku;
 
     public Ayah(int id, int surah, int ayahInSurah, boolean startofRuku) {
         this.id = id;
@@ -27,5 +27,15 @@ public class Ayah {
     @Override
     public int hashCode() {
         return Objects.hash(id, surah, ayahInSurah, startofRuku);
+    }
+
+    @Override
+    public String toString() {
+        return "Ayah{" +
+                "id=" + id +
+                ", surah=" + surah +
+                ", ayahInSurah=" + ayahInSurah +
+                ", startofRuku=" + startofRuku +
+                '}';
     }
 }

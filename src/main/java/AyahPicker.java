@@ -7,7 +7,19 @@ public class AyahPicker {
         this.ayaat = ayaat;
     }
 
-    public String pickVerses(int versesToRead, int startingVerse) {
-        return "";
+    public String pickVerses(int ayaatToRead, Ayah startingAyah) {
+        String startReference = makeReference(startingAyah);
+        int i = startingAyah.id + ayaatToRead - 2;
+        while(!ayaat.get(i).startofRuku) {
+            i++;
+        }
+        Ayah endAyah = ayaat.get(i - 1);
+        String endReference = makeReference(endAyah);
+
+        return "Read from " + startReference + " to " + endReference;
+    }
+
+    private String makeReference(Ayah endAyah) {
+        return endAyah.surah + ":" + endAyah.ayahInSurah;
     }
 }
