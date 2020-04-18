@@ -1,9 +1,10 @@
+package application;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.Boolean.parseBoolean;
 import static java.lang.Integer.parseInt;
@@ -25,9 +26,13 @@ public class Utils {
     }
 
     public static List<Ayah> findRuku(List<Ayah> ayaat) {
-        List<Ayah> rukuat = ayaat.stream()
-                .filter(ayah -> ayah.startofRuku)
-                .collect(Collectors.toList());
+        List<Ayah> rukuat = new ArrayList<>();
+        for (int i = 0; i < ayaat.size(); i++) {
+            Ayah ayah = ayaat.get(i);
+            if (ayah.startofRuku) {
+                rukuat.add(ayah);
+            }
+        }
         return rukuat;
     }
 

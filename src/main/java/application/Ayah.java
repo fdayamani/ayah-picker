@@ -1,3 +1,5 @@
+package application;
+
 import java.util.Objects;
 
 public class Ayah {
@@ -15,7 +17,7 @@ public class Ayah {
 
     @Override
     public String toString() {
-        return "Ayah{" +
+        return "application.Ayah{" +
                 "id=" + id +
                 ", surah='" + surah + '\'' +
                 ", ayahInSurah=" + ayahInSurah +
