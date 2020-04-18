@@ -16,7 +16,7 @@ public class Utils {
             reader.readLine();
             reader.lines().forEach(line -> {
                 String[] values = line.split(",");
-                data.add(new Ayah(parseInt(values[0]), parseInt(values[1]), parseInt(values[2]), parseBoolean(values[3])));
+                data.add(new Ayah(parseInt(values[0]), values[2], parseInt(values[3]), parseBoolean(values[4])));
             });
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,15 +2,25 @@ import java.util.Objects;
 
 public class Ayah {
     public int id;
-    public int surah;
+    public String surah;
     public int ayahInSurah;
     public boolean startofRuku;
 
-    public Ayah(int id, int surah, int ayahInSurah, boolean startofRuku) {
+    public Ayah(int id, String surah, int ayahInSurah, boolean startofRuku) {
         this.id = id;
         this.surah = surah;
         this.ayahInSurah = ayahInSurah;
         this.startofRuku = startofRuku;
+    }
+
+    @Override
+    public String toString() {
+        return "Ayah{" +
+                "id=" + id +
+                ", surah='" + surah + '\'' +
+                ", ayahInSurah=" + ayahInSurah +
+                ", startofRuku=" + startofRuku +
+                '}';
     }
 
     @Override
@@ -19,23 +29,13 @@ public class Ayah {
         if (o == null || getClass() != o.getClass()) return false;
         Ayah ayah = (Ayah) o;
         return id == ayah.id &&
-                surah == ayah.surah &&
                 ayahInSurah == ayah.ayahInSurah &&
-                startofRuku == ayah.startofRuku;
+                startofRuku == ayah.startofRuku &&
+                Objects.equals(surah, ayah.surah);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, surah, ayahInSurah, startofRuku);
-    }
-
-    @Override
-    public String toString() {
-        return "Ayah{" +
-                "id=" + id +
-                ", surah=" + surah +
-                ", ayahInSurah=" + ayahInSurah +
-                ", startofRuku=" + startofRuku +
-                '}';
     }
 }

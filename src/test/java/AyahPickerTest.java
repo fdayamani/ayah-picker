@@ -17,21 +17,21 @@ public class AyahPickerTest {
     picks_verses_to_read_based_on_input_of_7() {
         AyahPicker ayahPicker = new AyahPicker(testData);
 
-        assertThat(ayahPicker.pickVerses(7, testData.get(0)), equalTo("Read from 1:1 to 1:7"));
+        assertThat(ayahPicker.pickVerses(7, testData.get(0)), equalTo("Read from Al-Fatihah:1 to Al-Fatihah:7"));
     }
 
     @Test public void
     picks_verses_up_to_end_of_ruku() {
         AyahPicker ayahPicker = new AyahPicker(testData);
 
-        assertThat(ayahPicker.pickVerses(5, testData.get(0)), equalTo("Read from 1:1 to 1:7"));
+        assertThat(ayahPicker.pickVerses(5, testData.get(0)), equalTo("Read from Al-Fatihah:1 to Al-Fatihah:7"));
     }
 
     @Test public void
     rounds_up_to_the_next_ruku_if_selection_is_over_7() {
         AyahPicker ayahPicker = new AyahPicker(testData);
 
-        assertThat(ayahPicker.pickVerses(8, testData.get(0)), equalTo("Read from 1:1 to 2:7"));
+        assertThat(ayahPicker.pickVerses(8, testData.get(0)), equalTo("Read from Al-Fatihah:1 to Al-Baqarah:7"));
     }
 
     //test for if it picks the end of the qur'an
