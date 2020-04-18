@@ -10,18 +10,14 @@ public class AyahPicker {
     }
 
     public String pickVerses(int ayaatToRead, Ayah startingAyah) {
-        String startReference = makeReference(startingAyah);
+        String startReference = startingAyah.makeReference();
         int i = startingAyah.id + ayaatToRead;
         while(!ayaat.get(i).startofRuku) {
             i++;
         }
         Ayah endAyah = ayaat.get(i - 1);
-        String endReference = makeReference(endAyah);
+        String endReference = endAyah.makeReference();
 
         return "Read from " + startReference + " to " + endReference;
-    }
-
-    private String makeReference(Ayah endAyah) {
-        return endAyah.surah + ":" + endAyah.ayahInSurah;
     }
 }

@@ -40,4 +40,9 @@ public class Ayah {
     public int hashCode() {
         return Objects.hash(id, surah, ayahInSurah, startofRuku);
     }
+
+    public String makeReference() {
+        return surah + ":" + ayahInSurah;
+    }
+
 }
