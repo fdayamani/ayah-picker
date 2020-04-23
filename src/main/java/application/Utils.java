@@ -27,12 +27,6 @@ public class Utils {
 
     public static List<Ayah> findRuku(List<Ayah> ayaat) {
         List<Ayah> rukuat = new ArrayList<>();
-        for (int i = 0; i < ayaat.size(); i++) {
-            Ayah ayah = ayaat.get(i);
-            if (ayah.startofRuku) {
-                rukuat.add(ayah);
-            }
-        }
         return rukuat;
     }
 
