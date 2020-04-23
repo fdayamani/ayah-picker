@@ -11,8 +11,7 @@ public class AyahPicker {
 
     public String pickVerses(int ayaatToRead, Ayah startingAyah) {
         String startReference = startingAyah.makeReference();
-        int i = 0;
-        Ayah endAyah = ayaat.get(i - 1);
+        Ayah endAyah = startingAyah;
         String endReference = endAyah.makeReference();
 
         return "Read from " + startReference + " to " + endReference;
