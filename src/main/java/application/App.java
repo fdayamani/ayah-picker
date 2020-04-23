@@ -1,8 +1,8 @@
 package application;
 
-import javax.swing.*;
 import java.util.List;
 
+import static application.Utils.*;
 import static java.lang.Integer.parseInt;
 import static javax.swing.JOptionPane.showInputDialog;
 
@@ -13,8 +13,8 @@ public class App {
         if (args.length != 1) {
             throw new RuntimeException("Please enter how many verses you wish to recite");
         }
-        List<Ayah> ayaat = Utils.readData("src/main/resources/ayaat.csv");
-        Ayah startingVerse = Utils.selectRandomStartPoint(Utils.findRuku(ayaat));
+        List<Ayah> ayaat = readData("src/main/resources/ayaat.csv");
+        Ayah startingVerse = selectRandomStartPoint(findRuku(ayaat));
         AyahPicker ayahPicker = new AyahPicker(ayaat);
         System.out.println(ayahPicker.pickVerses(numberOfAyaatToRead, startingVerse));
     }
