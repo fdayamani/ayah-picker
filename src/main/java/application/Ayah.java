@@ -6,13 +6,13 @@ public class Ayah {
     public int id;
     public String surah;
     public int ayahInSurah;
-    public boolean startofRuku;
+    public boolean startOfRuku;
 
-    public Ayah(int id, String surah, int ayahInSurah, boolean startofRuku) {
+    public Ayah(int id, String surah, int ayahInSurah, boolean startOfRuku) {
         this.id = id;
         this.surah = surah;
         this.ayahInSurah = ayahInSurah;
-        this.startofRuku = startofRuku;
+        this.startOfRuku = startOfRuku;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Ayah {
                 "id=" + id +
                 ", surah='" + surah + '\'' +
                 ", ayahInSurah=" + ayahInSurah +
-                ", startofRuku=" + startofRuku +
+                ", startofRuku=" + startOfRuku +
                 '}';
     }
 
@@ -32,13 +32,13 @@ public class Ayah {
         Ayah ayah = (Ayah) o;
         return id == ayah.id &&
                 ayahInSurah == ayah.ayahInSurah &&
-                startofRuku == ayah.startofRuku &&
+                startOfRuku == ayah.startOfRuku &&
                 Objects.equals(surah, ayah.surah);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, surah, ayahInSurah, startofRuku);
+        return Objects.hash(id, surah, ayahInSurah, startOfRuku);
     }
 
     public String makeReference() {
