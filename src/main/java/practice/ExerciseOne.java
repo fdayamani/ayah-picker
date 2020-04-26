@@ -2,7 +2,7 @@ package practice;
 
 public class ExerciseOne {
 
-/*    id|	surah name|	ayah in surah|	start of ruku
+/*    id|	surahName|	ayahInSurah|	startOfRuku
       0 |	Al-Fatihah|	            1|	true            */
 
     public static void main(String[] args) {

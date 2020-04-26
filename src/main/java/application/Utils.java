@@ -27,6 +27,7 @@ public class Utils {
 
     public static List<Ayah> findRuku(List<Ayah> ayaat) {
         List<Ayah> rukuat = new ArrayList<>();
+        //add things to the list!
         return rukuat;
     }
 
