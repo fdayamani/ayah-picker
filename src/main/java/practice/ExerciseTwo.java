@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.List;
+
 public class ExerciseTwo {
     public static void main (String[] args) {
         /*Exercise Two: Given a random starting ayah in the Holy Qur'an,
@@ -12,7 +14,7 @@ public class ExerciseTwo {
 //
 //        Ayah endAyah = ; // Change this line
 //
-//        System.out.println("Read from " + startingAyah.surah + ":" + startingAyah.ayahNumber +
-//                " to " + endAyah.surah + ":" + endAyah.ayahNumber);
+//        System.out.println("Read from " + startingAyah.surahName + ":" + startingAyah.ayahInSurah +
+//                " to " + endAyah.surahName + ":" + endAyah.ayahInSurah);
     }
 }
