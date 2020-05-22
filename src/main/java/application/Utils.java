@@ -3,6 +3,7 @@ package application;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class Utils {
     public static List<Ayah> readData(String path) {
         List<Ayah> data = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.class.getResourceAsStream(path)));
             reader.readLine();
             reader.lines().forEach(line -> {
                 String[] values = line.split(",");

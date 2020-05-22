@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class AyahPickerTest {
     List<Ayah> testData = new ArrayList<>();
     @Before public void setUp() {
-        testData = Utils.readData("src/test/resources/test_data.csv");
+        testData = Utils.readData("/test_data.csv");
     }
 
     @Test public void
