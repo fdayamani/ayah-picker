@@ -5,9 +5,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.Boolean.parseBoolean;
 import static java.lang.Integer.parseInt;
+import static java.util.stream.Collectors.toList;
 
 public class Utils {
     public static List<Ayah> readData(String path) {
@@ -26,13 +28,9 @@ public class Utils {
     }
 
     public static List<Ayah> findRuku(List<Ayah> ayaat) {
-        List<Ayah> rukuat = new ArrayList<>();
-        for (int i = 0; i < ayaat.size(); i++) {
-            Ayah ayah = ayaat.get(i);
-            if (ayah.startofRuku) {
-                rukuat.add(ayah);
-            }
-        }
+        List<Ayah> rukuat = ayaat.stream()
+                .filter(ayah -> ayah.startofRuku)
+                .collect(toList());
         return rukuat;
     }
 
